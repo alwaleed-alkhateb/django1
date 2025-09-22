@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+
+ 
+
+  <form method="post" >
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <input type="submit" value="singup">
+  </form>
+
+  {# Assumes you set up the password_reset view in your URLConf #}
+
+{% endblock %}
